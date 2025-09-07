@@ -1,0 +1,107 @@
+actor
+|- actor_id
+|- first_name
+|- last_name
+
+address
+|- Address_id
+|- address
+|- address2
+|- district
+|- city_id
+|- postal_code
+|- phone
+
+category
+|- category_id
+|- name
+
+city
+|- city_id
+|- city
+|- country_id
+
+country
+|- country_id
+|- country
+
+customer
+|- customer_id
+|- store_id
+|- firt_name
+|- last_name
+|- email
+|- address_id
+|- activebool
+
+film
+|- film_id
+|- title
+|- decription
+|- release_year
+|- language_id
+|- original_language_id
+|- rental_duration
+|- rental_rate
+|- lenght
+|- replacement_cost
+|- rating
+|- special_features
+|- full_text
+
+
+film_Actor
+|- actor_id
+|- film_id
+
+film_category
+|- film_id
+|- category_id
+
+inventory
+|- inventory_id
+|- film_id
+|- store_id
+
+language
+|- language_id
+|- name
+
+payment
+|- payment_id
+|- customer_id
+|- staff_id
+|- rental_id
+|- amount
+
+public.actor
+|- actor_id
+|- first_name
+|- last_name
+
+rental
+|- rental_id
+|- rental_date
+|- inventory_id
+|- customer_id
+|- return_date
+|- staff_id
+
+staff
+|- staff_id
+|- first_name
+|- last_name
+|- address_id
+|- emil
+|- store_id
+|- active
+|- username
+|- password
+|- picture
+
+store
+|- store_id
+|- store_staff_id
+|- address_id
+
+
