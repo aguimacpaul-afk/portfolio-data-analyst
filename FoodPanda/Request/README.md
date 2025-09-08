@@ -17,11 +17,19 @@
 
 7. Queremos analizar si hay diferencias en cómo los usuarios califican a los restaurantes según su categoría de comida.
 
-      Calcula la distribución estadística de las calificaciones (rating) agrupada por category (media, mediana, desviación estándar, mínimo, máximo).
+      Calcula la distribución estadística de las calificaciones (rating) agrupada por category (media,               mediana, desviación estándar, mínimo, máximo).
       Ordena las categorías de mayor a menor por su promedio de rating.
       Haz un boxplot donde el eje X sean las categorías (ordenadas) y el eje Y los ratings.
       Bonus: agrega un stripplot encima para mostrar la dispersión de puntos.
 
-
-
+8. Convierte las columnas order_date y signup_date a tipo datetime.
+      Calcula para cada cliente el tiempo de vida en la plataforma:
+      lifetime=ultima fecha de orden−fecha de signup
+      lifetime=ultima fecha de orden−fecha de signup
+      Obtén estadísticas descriptivas del lifetime (media, mediana, std, percentiles).
+      Crea una columna categórica que clasifique a los clientes:
+      Short-term: lifetime < 90 días
+      Mid-term: 90–180 días
+      Long-term: >180 días
+      Haz un gráfico (barplot o countplot) mostrando cuántos clientes caen en cada categoría de lifetime.
 
