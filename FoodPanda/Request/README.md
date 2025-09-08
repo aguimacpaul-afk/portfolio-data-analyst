@@ -8,3 +8,20 @@
 
 5. Predicción de lealtad simple: Genera una nueva columna booleana: high_loyalty = loyalty_points > promedio_general. Luego, cruza eso con churn
    para ver si los clientes con alta lealtad tienen menor tasa de abandono.
+
+6. El equipo de negocio quiere entender mejor cómo se relaciona la lealtad con la retención de clientes.
+#Debes:
+   #Calcular la tasa de churn (porcentaje de clientes inactivos) en función de si tienen alta lealtad o no.
+   #Mostrar los resultados en un gráfico de barras comparativo.
+   #Escribir una conclusión corta que explique si los puntos de lealtad realmente ayudan a retener clientes.
+
+7. Queremos analizar si hay diferencias en cómo los usuarios califican a los restaurantes según su categoría de comida.
+
+      Calcula la distribución estadística de las calificaciones (rating) agrupada por category (media, mediana, desviación estándar, mínimo, máximo).
+      Ordena las categorías de mayor a menor por su promedio de rating.
+      Haz un boxplot donde el eje X sean las categorías (ordenadas) y el eje Y los ratings.
+      Bonus: agrega un stripplot encima para mostrar la dispersión de puntos.
+
+
+
+
