@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 
-path = "/home/panda/Desktop/ia/github/ia vs human/balanced_ai_human_prompts.csv"
+path = "iavshuman/balanced_ai_human_prompts.csv"
 df = pd.read_csv(path)#2750,2
 
 """                                                text  generated
