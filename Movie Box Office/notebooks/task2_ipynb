@@ -1,0 +1,55 @@
+# Tarea 2 – Estadísticas descriptivas + Visualización
+
+# analisis descriptivo : presupuesto, taquilla us-global, rating imdb - rotting tomatoes
+
+df_descriptivo = pd.DataFrame({'presupuesto':df.BudgetUSD,
+'taquilla_usd': df.US_BoxOfficeUSD,
+'taquilla_global': df.Global_BoxOfficeUSD,
+'rating_imdb':df.IMDbRating,
+'rating_rrtt': df.RottenTomatoesScore,
+	})
+"""        presupuesto  taquilla_usd  ...    rating_imdb    rating_rrtt
+count  9.999990e+05  9.999990e+05  ...  999999.000000  999999.000000
+mean   9.802824e+06  1.496163e+07  ...       6.494788      64.776426
+std    2.249421e+07  3.879403e+07  ...       1.485606      17.592474
+min    1.000000e+05  4.002547e+04  ...       1.000000       0.000000
+25%    1.190511e+06  1.489805e+06  ...       5.500000      53.000000
+50%    3.265790e+06  4.388876e+06  ...       6.500000      65.000000
+75%    9.002791e+06  1.287606e+07  ...       7.500000      77.000000
+max    3.000000e+08  1.018198e+09  ...      10.000000     100.0000002"""
+
+#df_descriptivo.to_csv("df_descriptivo.csv")
+
+plot_descriptivo = df_descriptivo
+
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Crear histogramas
+fig, axs = plt.subplots(1,3,figsize=(12,4), num="Distribución de Presupuestos (0–100M)")
+# Histograma 1 - Presupuesto
+sns.histplot(df.BudgetUSD/1_000_000, ax=axs[0], color='skyblue')
+axs[0].set_title("Presupuesto (M USD)")
+axs[0].set_xlim(0, 100)
+
+# Histograma 2 - Global Box Office
+sns.histplot(df.Global_BoxOfficeUSD/1_000_000, ax=axs[1], color='salmon')
+axs[1].set_title("Global Box Office (M USD)")
+axs[1].set_xlim(0, 100)
+
+# Histograma 3 - US Box Office
+sns.histplot(df.US_BoxOfficeUSD/1_000_000, ax=axs[2], color='green')
+axs[2].set_title("US Box Office (M USD)")
+axs[2].set_xlim(0, 100)
+
+plt.tight_layout()
+#plt.show()
+
+genres_top = df.Genre.value_counts().head()
+"""Genre
+Drama       250018
+Comedy      199832
+Action      150131
+Thriller    100071
+Romance     100021"""
